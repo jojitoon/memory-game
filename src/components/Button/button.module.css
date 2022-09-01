@@ -1,0 +1,29 @@
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+}
+
+.primary {
+  background-color: var(--color-primary);
+}
+
+.secondary {
+  background-color: var(--color-secondary);
+}
+
+.tertiary {
+  background-color: var(--color-tertiary);
+}
+
+.full {
+  width: 100%;
+}
+
+.button:active {
+  transform: scale(0.95);
+}

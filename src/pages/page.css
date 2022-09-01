@@ -1,0 +1,79 @@
+.body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-primary);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.body.white {
+  background-color: white;
+}
+
+.menu-header {
+  color: white;
+}
+.menu {
+  padding: 40px 25px;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 550px;
+  margin-top: 40px;
+}
+
+.menu-label {
+  color: var(--color-tertiary);
+  font-size: 14px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  margin: 20px 0;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 20px 0;
+}
+
+.start-button {
+  margin-top: 20px;
+}
+
+.nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px;
+}
+
+.nav {
+  color: var(--color-primary);
+}
+
+.new-game {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 560px) {
+  .menu {
+    width: 90%;
+    padding: 20px 15px;
+  }
+
+  .menu-label {
+    font-size: 12px;
+  }
+  .grid-2,
+  .grid-4 {
+    grid-gap: 10px;
+  }
+}
