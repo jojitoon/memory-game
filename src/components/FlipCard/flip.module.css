@@ -47,3 +47,13 @@
 .matched {
   background-color: var(--color-secondary);
 }
+
+@media screen and (max-width: 500px) {
+  .card {
+    height: 50px;
+    width: 50px;
+  }
+  .back {
+    font-size: 20px;
+  }
+}

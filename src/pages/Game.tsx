@@ -141,7 +141,7 @@ export const MemoryGame: React.FC<MemoryGameProps> = ({
     <div className='body white'>
       <div className='nav'>
         <h2 className='title'>memory</h2>
-        <div>
+        <div className='desktop'>
           <Button variant='secondary' onClick={onRestart}>
             Restart
           </Button>
@@ -152,6 +152,11 @@ export const MemoryGame: React.FC<MemoryGameProps> = ({
             New Game
           </Button>
         </div>
+        <div className='mobile'>
+          <Button variant='secondary' onClick={onRestart}>
+            Menu
+          </Button>
+        </div>
       </div>
       <GridBox
         gridSize={gameSettings.gridSize}
@@ -159,7 +164,15 @@ export const MemoryGame: React.FC<MemoryGameProps> = ({
         onGridItemClick={onGridItemClick}
       />
       <div className='footer'>
-        player {currentPlayer} -<span>{scores[currentPlayer] || 0}</span>
+        {new Array(gameSettings.numberOfPlayers).fill(0).map((_, player) => (
+          <div
+            className={`footer-item ${
+              currentPlayer === player + 1 ? 'active' : ''
+            }`}>
+            <div className='player'>Player {player + 1}</div>
+            <div className='score'>{scores[player + 1] || 0}</div>
+          </div>
+        ))}
       </div>
     </div>
   );
